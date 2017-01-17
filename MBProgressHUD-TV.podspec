@@ -12,7 +12,7 @@ Pod::Spec.new do |s|
   s.source_files = 'MBProgressHUD-TV/**/*.{h,m}'
   
   s.resource_bundles = {
-     'MBProgressHUD-TV' => ['MBProgressHUD-TV/MBProgressHUD.bundle']
+     'MBProgressHUD-TV' => ['MBProgressHUD-TV/MBProgressHUD.bundle/*']
   }
 
   s.requires_arc = true
