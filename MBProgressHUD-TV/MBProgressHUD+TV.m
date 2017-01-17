@@ -25,7 +25,7 @@
     hud.removeFromSuperViewOnHide = YES;
     
     // 1秒之后再消失
-    [hud hide:YES DismissAfterDelay:delay];
+    [hud hide:YES afterDelay:delay];
 }
 
 #pragma mark 显示错误信息
