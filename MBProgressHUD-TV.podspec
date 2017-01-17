@@ -11,9 +11,10 @@ Pod::Spec.new do |s|
   s.platform         = :ios, '7.0'
   s.source_files = 'MBProgressHUD-TV/**/*.{h,m}'
   
-  s.resource = {
-     'MBProgressHUD-TV' => 'MBProgressHUD-TV/MBProgressHUD.bundle'
-  }
+  #s.resource_bundles = {
+  #   'MBProgressHUD-TV' => 'MBProgressHUD-TV/MBProgressHUD.bundle'
+  #}
+  s.resource         = "MBProgressHUD-TV/MBProgressHUD.bundle" 
 
   s.requires_arc = true
   s.dependency 'MBProgressHUD'
