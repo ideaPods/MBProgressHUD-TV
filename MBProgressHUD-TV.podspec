@@ -11,7 +11,7 @@ Pod::Spec.new do |s|
   s.platform         = :ios, '7.0'
   s.source_files = 'MBProgressHUD-TV/**/*.{h,m}'
   
-  s.resource_bundles = {
+  s.resource = {
      'MBProgressHUD-TV' => 'MBProgressHUD-TV/MBProgressHUD.bundle'
   }
 
