@@ -9,7 +9,7 @@
 
 @implementation MBProgressHUD (TV)
 #pragma mark 显示信息
-+ (void)show:(NSString *)text icon:(NSString *)icon view:(UIView *)view afterDelay:(NSTimeInterval)delay
++ (void)show:(NSString *)text icon:(NSString *)icon view:(UIView *)view DismissAfterDelay:(NSTimeInterval)delay
 {
     if (view == nil) view = [[UIApplication sharedApplication].windows lastObject];
     // 快速显示一个提示信息
@@ -25,26 +25,26 @@
     hud.removeFromSuperViewOnHide = YES;
     
     // 1秒之后再消失
-    [hud hide:YES afterDelay:delay];
+    [hud hide:YES DismissAfterDelay:delay];
 }
 
 #pragma mark 显示错误信息
 + (void)showError:(NSString *)error toView:(UIView *)view{
-    [self show:error icon:@"error.png" view:view afterDelay:0.7];
+    [self show:error icon:@"error.png" view:view DismissAfterDelay:0.7];
 }
 
 + (void)showSuccess:(NSString *)success toView:(UIView *)view
 {
-    [self show:success icon:@"success.png" view:view afterDelay:1.0];
+    [self show:success icon:@"success.png" view:view DismissAfterDelay:1.0];
 }
 
-+ (void)showError:(NSString *)error toView:(UIView *)view afterDelay:(NSTimeInterval)delay{
-    [self show:error icon:@"error.png" view:view afterDelay:delay];
++ (void)showError:(NSString *)error toView:(UIView *)view DismissAfterDelay:(NSTimeInterval)delay{
+    [self show:error icon:@"error.png" view:view DismissAfterDelay:delay];
 }
 
-+ (void)showSuccess:(NSString *)success toView:(UIView *)view afterDelay:(NSTimeInterval)delay
++ (void)showSuccess:(NSString *)success toView:(UIView *)view DismissAfterDelay:(NSTimeInterval)delay
 {
-    [self show:success icon:@"success.png" view:view afterDelay:delay];
+    [self show:success icon:@"success.png" view:view DismissAfterDelay:delay];
 }
 #pragma mark 显示一些信息
 + (MBProgressHUD *)showMessage:(NSString *)message toView:(UIView *)view {
@@ -69,14 +69,14 @@
     [self showError:error toView:nil];
 }
 
-+ (void)showSuccess:(NSString *)success afterDelay:(NSTimeInterval)delay
++ (void)showSuccess:(NSString *)success DismissAfterDelay:(NSTimeInterval)delay
 {
-    [self showSuccess:success toView:nil afterDelay:delay];
+    [self showSuccess:success toView:nil DismissAfterDelay:delay];
 }
 
-+ (void)showError:(NSString *)error afterDelay:(NSTimeInterval)delay
++ (void)showError:(NSString *)error DismissAfterDelay:(NSTimeInterval)delay
 {
-    [self showError:error toView:nil afterDelay:delay];
+    [self showError:error toView:nil DismissAfterDelay:delay];
 }
 
 + (MBProgressHUD *)showMessage:(NSString *)message
